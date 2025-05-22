@@ -10,54 +10,61 @@ import {
 
 const windowWidth = Dimensions.get("window").width;
 
-export default function Login({ navigation }) {
+export default function Cadastro({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cadastro</Text>
+      <Text style={styles.title}>Criar Conta</Text>
 
       <View style={styles.inputContainer}>
-        <Text>Nome de Usuario</Text>
+        <Text>Usuário</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite seu Nome de Usuario"
+          placeholder="seu nome de usuário"
           keyboardType="default"
+          autoCapitalize="none"
+          autoCorrect={false}
         />
 
         <Text>Email</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite seu email"
+          placeholder="seu@gimail.com"
           keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
         />
 
         <Text>Senha</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite sua senha"
-          keyboardType="visible-password"
+          placeholder=""
           secureTextEntry
-          //value={Senha}
+          autoCapitalize="none"
         />
 
-        <Text>Confirme Sua Senha</Text>
+        <Text>Confirmar Senha</Text>
         <TextInput
           style={styles.input}
-          placeholder="Digite sua senha novamente"
+          placeholder=""
           secureTextEntry
-          //value={ConfirmarSenha}
+          autoCapitalize="none"
         />
       </View>
+
       <View style={styles.buttonContainer}>
         <Button
-          title="Cadastrar-Se"
+          title="Cadastrar"
           onPress={() => navigation.navigate("Inicio")}
         />
       </View>
 
-      <Text style={styles.subtitle}>Já tem uma conta?</Text>
+      <Text style={styles.subtitle}>Já possui login?</Text>
 
       <View style={styles.buttonContainer}>
-        <Button title="Login" onPress={() => navigation.navigate("Login")} />
+        <Button
+          title="Ir para login"
+          onPress={() => navigation.navigate("Login")}
+        />
       </View>
     </View>
   );
