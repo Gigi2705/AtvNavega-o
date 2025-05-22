@@ -33,12 +33,12 @@ export default function Login({ navigation }) {
 
       <View style={styles.buttonContainer}>
         <Button
-          title="Login"
+          title="Entrar"
           onPress={() => navigation.navigate("Inicio")}
         />
       </View>
 
-      <Text style={styles.subtitle}>Não tem login?</Text>
+      <Text style={styles.subtitle}>Ainda não tem uma conta?</Text>
 
       <View style={styles.buttonContainer}>
         <Button
